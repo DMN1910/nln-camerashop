@@ -9,7 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $auth->login($_POST['email'], $_POST['password']);
 
     if ($result === true) {
-        header("Location: index.php");
+        if ($_SESSION['user']['role'] === 'admin') {
+            header("Location: ../admin/index.php");
+        } else {
+            header("Location: index.php");
+        }
         exit;
     } else {
         $error = $result;

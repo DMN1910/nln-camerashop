@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
 $dbname = "camera_shop";
-$user = "root";        // mặc định XAMPP
-$pass = "";            // mặc định XAMPP (rỗng)
+$user = "root";      
+$pass = "";            
 
 try {
     $pdo = new PDO(

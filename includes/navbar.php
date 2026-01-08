@@ -3,6 +3,7 @@
         <a class="navbar-brand" href="<?= BASE_URL ?>/index.php">Camera Shop</a>
 
         <ul class="navbar-nav ms-auto">
+            <a>gio hang</a>
             <?php if (isset($_SESSION['user'])): ?>
                 <li class="nav-item text-white me-3">
                     Xin chào, <?= $_SESSION['user']['name'] ?>
@@ -20,4 +21,32 @@
             <?php endif; ?>
         </ul>
     </div>
+
 </nav>
+<div class="nav " style="display:flex">
+    <li class="nav-item">
+        <a class="nav-link" href="<?= BASE_URL ?>/index.php">
+            Tất cả
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="<?= BASE_URL ?>/index.php?category_id=1">
+            DSLR
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="<?= BASE_URL ?>/index.php?category_id=2">
+            Mirrorless
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="<?= BASE_URL ?>/index.php?category_id=3">
+            Ống kính
+        </a>
+    </li>
+
+
+</div>
